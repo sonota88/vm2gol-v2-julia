@@ -50,7 +50,8 @@ function is_kw(str)
     "call_set",
     "return",
     "while",
-    "case"
+    "case",
+    "when"
   ]
 end
 

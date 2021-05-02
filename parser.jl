@@ -197,6 +197,8 @@ function parse_while()
 end
 
 function _parse_when_clause()
+  consume("when")
+
   consume("(")
   expr = parse_expr()
   consume(")")
