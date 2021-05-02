@@ -212,15 +212,12 @@ end
 
 function parse_case()
   consume("case")
-  consume("{")
 
   when_clauses = Any[]
 
-  while peek().value != "}"
+  while peek().value == "when"
     push!(when_clauses, _parse_when_clause())
   end
-
-  consume("}")
 
   vcat(["case"], when_clauses)
 end
